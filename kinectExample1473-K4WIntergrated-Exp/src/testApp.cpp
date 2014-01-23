@@ -1,19 +1,21 @@
 #include "testApp.h"
+#include "Simple1473KeepAlive.h"
 
 extern int upload_firmware(bool b1473);
 extern int do_motor();
+extern int upload_main();
 
 //--------------------------------------------------------------
 void testApp::setup() {
 	ofSetLogLevel(OF_LOG_VERBOSE);
 	
-//    ofBuffer buf = ofBufferFromFile("audiosAlt.bin",true);
+//    ofBuffer buf = ofBufferFromFile("audios.bin",true);
 //    
 //    for(int i = 0; i < buf.size(); i++){
 ////        if( i < buf.size()-85 && i > buf.size()-(85*3) ){
 ////            buf.getBinaryBuffer()[i] = ofRandom(0, 255);
 ////        }
-//        printf("0x%1x, ", (unsigned char)buf.getBinaryBuffer()[i]);
+//        printf("0x%1x,", (unsigned char)buf.getBinaryBuffer()[i]);
 //    }
 //    
 ////    ofBufferToFile("audiosAlt.bin", buf);
@@ -27,17 +29,21 @@ void testApp::setup() {
 //    cout << " upload " << endl;
 //    
 //      upload_firmware(true);
-//    
-//    cout << " sleep " << endl;
 //
+//    cout << " sleep " << endl;
+////
 //      ofSleepMillis(3000);
 //
 //    cout << " motor " << endl;
 
-      do_motor();
 
+//      upload_firmware(true);
+//      ofSleepMillis(3000);
+//      do_motor();
+
+
+    keepAlive1473(); 
     
-//upload_main();
     
     
 	// enable depth->video image calibration

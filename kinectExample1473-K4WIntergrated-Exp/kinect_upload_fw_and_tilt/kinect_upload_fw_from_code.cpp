@@ -209,9 +209,7 @@ int upload_firmware(bool b1473) {
             
                 //read = fread(page, 1, 0x4000, fw);
                 
-                read = bytesLeft < 0x4000 ? bytesLeft : 0x4000;
-                
-                
+                read = bytesLeft < 0x4000 ? bytesLeft : 0x4000;                
                 if (read <= 0) {
                     break;
                 }
@@ -220,9 +218,8 @@ int upload_firmware(bool b1473) {
 
                 printf("index is %i, read is %i, bytes left is %i - numBytes is %i\n", readIndex, read, bytesLeft, numBytesToRead );
 
-                memccpy(page, &readPtr[readIndex], read, sizeof(char));
+                memcpy(page, &readPtr[readIndex], read);
                 readIndex += read;
-            
                 
                 //LOG("");
                 cmd.seq = fn_le32(seq);
