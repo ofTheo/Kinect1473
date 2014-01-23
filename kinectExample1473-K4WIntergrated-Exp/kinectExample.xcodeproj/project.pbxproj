@@ -32,8 +32,9 @@
 		E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424410CC5A17004149E2 /* AppKit.framework */; };
 		E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
 		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
+		E4C7314318914EC000C0ACDF /* fwbin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4C7314118914EC000C0ACDF /* fwbin.cpp */; };
+		E4C731451891566300C0ACDF /* libusb-1.0.0-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C731441891566300C0ACDF /* libusb-1.0.0-static.a */; };
 		E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
-		E4EF8BD61890862A004B975F /* libusb-1.0.0-theo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EF8BD51890862A004B975F /* libusb-1.0.0-theo.a */; };
 		E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */; };
 		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
@@ -162,9 +163,11 @@
 		E4C2424410CC5A17004149E2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		E4C2424510CC5A17004149E2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E4C2424610CC5A17004149E2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		E4C7314118914EC000C0ACDF /* fwbin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fwbin.cpp; sourceTree = "<group>"; };
+		E4C7314218914EC000C0ACDF /* fwbin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fwbin.h; sourceTree = "<group>"; };
+		E4C731441891566300C0ACDF /* libusb-1.0.0-static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libusb-1.0.0-static.a"; sourceTree = "<group>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
-		E4EF8BD51890862A004B975F /* libusb-1.0.0-theo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libusb-1.0.0-theo.a"; sourceTree = "<group>"; };
 		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
@@ -232,11 +235,11 @@
 				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
 				E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */,
 				E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */,
-				E4EF8BD61890862A004B975F /* libusb-1.0.0-theo.a in Frameworks */,
 				E45BE97D0E8CC7DD009D7055 /* AudioToolbox.framework in Frameworks */,
 				E45BE97E0E8CC7DD009D7055 /* Carbon.framework in Frameworks */,
 				E45BE97F0E8CC7DD009D7055 /* CoreAudio.framework in Frameworks */,
 				E45BE9800E8CC7DD009D7055 /* CoreFoundation.framework in Frameworks */,
+				E4C731451891566300C0ACDF /* libusb-1.0.0-static.a in Frameworks */,
 				E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */,
 				E45BE9830E8CC7DD009D7055 /* OpenGL.framework in Frameworks */,
 				E45BE9840E8CC7DD009D7055 /* QuickTime.framework in Frameworks */,
@@ -409,7 +412,7 @@
 		8600BE80184F825A001A95F4 /* libusb */ = {
 			isa = PBXGroup;
 			children = (
-				E4EF8BD51890862A004B975F /* libusb-1.0.0-theo.a */,
+				E4C731441891566300C0ACDF /* libusb-1.0.0-static.a */,
 				8600BE82184F825A001A95F4 /* libusb.h */,
 			);
 			path = libusb;
@@ -420,6 +423,8 @@
 			children = (
 				869327A11890830400235D8A /* k4w_tilt_led.cpp */,
 				869327A31890830400235D8A /* kinect_upload_fw_kinect_upload_fw.cpp */,
+				E4C7314118914EC000C0ACDF /* fwbin.cpp */,
+				E4C7314218914EC000C0ACDF /* fwbin.h */,
 			);
 			path = kinect_upload_fw_and_tilt;
 			sourceTree = "<group>";
@@ -773,6 +778,7 @@
 				255a7b680dc81e543c875794 /* usb_libusb10.c in Sources */,
 				d31f5c1b140c59b2af1533a8 /* registration.c in Sources */,
 				49beeb2dfa5319d55aa6899f /* tilt.c in Sources */,
+				E4C7314318914EC000C0ACDF /* fwbin.cpp in Sources */,
 				869327A41890830400235D8A /* k4w_tilt_led.cpp in Sources */,
 				ace7dc9a3223ed5ee1b80074 /* cameras.c in Sources */,
 				fb09c6b2a1da0ea217240cb8 /* ofxCvGrayscaleImage.cpp in Sources */,
@@ -1025,6 +1031,7 @@
 					/Users/theo_io/Documents/OF_0080_PROJECTS_MISC/examples/addons/kinectExample,
 					/Users/theo_io/Documents/OF_0080_PROJECTS_MISC/apps/Kinect1473/kinectExample1473/libusb,
 					/Users/theo/Documents/CODE/PROJECTS/_MISC_008_PROJECTS_OSX/apps/Kinect1473/kinectExample1473/libusb,
+					"/Users/theo/Documents/CODE/PROJECTS/_MISC_008_PROJECTS_OSX/apps/Kinect1473/kinectExample1473-K4WIntergrated/libusb",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
 				WRAPPER_EXTENSION = app;
@@ -1113,6 +1120,7 @@
 					/Users/theo_io/Documents/OF_0080_PROJECTS_MISC/examples/addons/kinectExample,
 					/Users/theo_io/Documents/OF_0080_PROJECTS_MISC/apps/Kinect1473/kinectExample1473/libusb,
 					/Users/theo/Documents/CODE/PROJECTS/_MISC_008_PROJECTS_OSX/apps/Kinect1473/kinectExample1473/libusb,
+					"/Users/theo/Documents/CODE/PROJECTS/_MISC_008_PROJECTS_OSX/apps/Kinect1473/kinectExample1473-K4WIntergrated/libusb",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

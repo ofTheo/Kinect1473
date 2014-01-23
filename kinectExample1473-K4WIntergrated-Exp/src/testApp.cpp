@@ -1,17 +1,40 @@
 #include "testApp.h"
 
-extern int upload_main();
+extern int upload_firmware(bool b1473);
 extern int do_motor();
 
 //--------------------------------------------------------------
 void testApp::setup() {
 	ofSetLogLevel(OF_LOG_VERBOSE);
-    
-    //uncomment to upload firmware - once uploaded comment out 
-    upload_main();
-    ofSleepMillis(3000);
+	
+//    ofBuffer buf = ofBufferFromFile("audiosAlt.bin",true);
+//    
+//    for(int i = 0; i < buf.size(); i++){
+////        if( i < buf.size()-85 && i > buf.size()-(85*3) ){
+////            buf.getBinaryBuffer()[i] = ofRandom(0, 255);
+////        }
+//        printf("0x%1x, ", (unsigned char)buf.getBinaryBuffer()[i]);
+//    }
+//    
+////    ofBufferToFile("audiosAlt.bin", buf);
+//    
+//    ofExit();
 
-    do_motor();
+
+
+//    //uncomment to upload firmware - once uploaded comment out 
+
+//    cout << " upload " << endl;
+//    
+//      upload_firmware(true);
+//    
+//    cout << " sleep " << endl;
+//
+//      ofSleepMillis(3000);
+//
+//    cout << " motor " << endl;
+
+      do_motor();
 
     
 //upload_main();
