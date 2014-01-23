@@ -7,9 +7,9 @@ extern int do_motor();
 void testApp::setup() {
 	ofSetLogLevel(OF_LOG_VERBOSE);
 	
-    //uncomment to upload firmware - once uploaded comment out 
-//    upload_main();
-//    ofSleepMillis(3000);
+    //uncomment to upload firmware - once uploaded comment out until device is power cycled. 
+    upload_main();
+    ofSleepMillis(3000);
 
     do_motor();
 
